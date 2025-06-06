@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wgoc - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- World Clocks Section -->
+    <section id="world-clocks" class="world-clocks" style="margin-top: 60px;">
+        <div class="clocks-container">
+            <div class="clock-card">
+                <div class="analog-clock" id="clock-ny"></div>
+                <div class="digital-clock" id="digital-ny"></div>
+                <div class="timezone-label">New York (EST)</div>
+            </div>
+            <div class="clock-card">
+                <div class="analog-clock" id="clock-london"></div>
+                <div class="digital-clock" id="digital-london"></div>
+                <div class="timezone-label">London (GMT)</div>
+            </div>
+            <div class="clock-card">
+                <div class="analog-clock" id="clock-berlin"></div>
+                <div class="digital-clock" id="digital-berlin"></div>
+                <div class="timezone-label">Berlin (CET)</div>
+            </div>
+            <div class="clock-card">
+                <div class="analog-clock" id="clock-tokyo"></div>
+                <div class="digital-clock" id="digital-tokyo"></div>
+                <div class="timezone-label">Tokyo (JST)</div>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img src="/project1.png" alt="Logo" style="height:40px;width:40px;border-radius:7px;box-shadow:0 2px 8px rgba(0,0,0,0.14);margin-right:10px;vertical-align:middle;">
+            </div>
+            <div class="nav-brand">Wgoc</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+<li><a href="#globe-section">Worldwide Visitors</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero section-card">
+        <div class="hero-content">
+            <h1>Wgoc</h1>
+            <p>Development</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section-card">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p><em>Pending</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects section-card">
+        <h2>Snake Game</h2>
+        <div class="snake-title">MY FIRST GAME EVER</div>
+        <div class="snake-desc">A simple classic Snake game. Use arrow keys to control the snake. Eat food, avoid walls and yourself!</div>
+        <div id="snake-game-container" class="snake-game-container">
+            <canvas id="snake-canvas" width="600" height="600"></canvas>
+            <div class="snake-controls">
+                <button id="snake-start" class="red-btn">Start Game</button>
+                <span class="snake-score">Score: <span id="snake-score">0</span></span>
+                <span class="snake-highscore">High Score: <span id="snake-highscore">0</span></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="globe-section" class="globe-section section-card">
+      <h2>Worldwide Visitors</h2>
+      <div class="globe-desc">See where people are viewing this site from! Your location is shown as a ping on the globe below.</div>
+      <div id="globeViz" style="width:100%;max-width:700px;height:420px;margin:0 auto;"></div>
+<div id="globe-location" class="globe-location"></div>
+    </section>
+
+    <section id="contact" class="contact section-card">
+        <h2>Connect to My DayZ Server</h2>
+        <div class="server-connection">
+            <div class="connection-buttons">
+                <button class="connect-button dzsa red-btn" onclick="connectToServer('dzsa')">
+                    <i class="fas fa-gamepad"></i> Connect with DZSA
+                </button>
+                <button class="connect-button vanilla red-btn" onclick="connectToServer('vanilla')">
+                    <i class="fas fa-gamepad"></i> Connect with Vanilla Launcher
+                </button>
+            </div>
+            <div class="server-info">
+                <p>Server Address: 15.204.196.146:2402</p>
+            </div>
+        </div>
+
+        <h2>Contact Me</h2>
+        <div class="email-form">
+            <form id="emailForm" onsubmit="return sendEmail()">
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required placeholder="Your Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="sendButton">Send Message</button>
+                    <p id="emailStatus"></p>
+                </div>
+            </form>
+            <div class="form-footer">Emails are sent to <b>cogan@cogan.live</b>. Limit: 1 per hour.</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cogan Wagner. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/globe.gl"></script>
+<script src="script.js"></script>
+</body>
+</html>
