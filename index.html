@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wgoc - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-form-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -142,19 +143,15 @@
 
         <h2>Contact Me</h2>
         <div class="email-form">
-            <form id="emailForm" onsubmit="return sendEmail()">
-                <div class="form-group">
-                    <input type="email" id="email" required placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" required placeholder="Your Message"></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" id="sendButton">Send Message</button>
-                    <p id="emailStatus"></p>
-                </div>
+            <form action="https://formspree.io/f/xeokezpl" method="POST" enctype="multipart/form-data" class="contact-form">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                <label for="upload">Attach a file:</label>
+                <input type="file" id="upload" name="upload">
+                <button type="submit">Send Message</button>
             </form>
-            <div class="form-footer">Emails are sent to <b>cogan@cogan.live</b>. Limit: 1 per hour.</div>
         </div>
     </section>
 

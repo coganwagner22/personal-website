@@ -19,8 +19,14 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
-    background: var(--bg-grey, #18191c);
+    min-height: 100vh;
+    background: url('background.png') center center / cover no-repeat fixed;
+    background-color: transparent;
 }
 
 .section-card {
@@ -34,7 +40,7 @@ body {
 }
 
 .rivals-section {
-    background: var(--bg-dark, #18191c);
+    background: rgba(34,34,38,0.93);
     border-radius: 17px;
     box-shadow: 0 2px 18px 0 rgba(0,0,0,0.18);
     margin: 2.5rem auto;
@@ -510,7 +516,7 @@ body {
 }
 
 .project-card {
-    background: var(--bg-dark);
+    background: rgba(34,34,38,0.93);
     border: 1.5px solid var(--border-grey);
     border-radius: 14px;
     padding: 2rem 1.5rem 1.5rem 1.5rem;
@@ -571,7 +577,7 @@ body {
     padding: 2.5rem 2.5rem 2.5rem 2.5rem;
     max-width: 700px;
     margin: 3rem auto 3rem auto;
-    background: var(--bg-dark);
+    background: rgba(34,34,38,0.93);
     border-bottom: 1px solid var(--border-grey);
     box-sizing: border-box;
     overflow-x: hidden;
@@ -612,7 +618,7 @@ body {
     margin: 2.5rem auto 2rem auto;
     text-align: center;
     padding: 2rem 1rem 1.5rem 1rem;
-    background: var(--bg-grey);
+    background: rgba(34,34,38,0.93);
     border-radius: 10px;
     border: 1.5px solid var(--border-grey);
     box-shadow: var(--shadow-light);
@@ -688,7 +694,7 @@ body {
     max-width: 600px;
     margin: 2.5rem auto 0 auto;
     text-align: center;
-    background: var(--bg-grey);
+    background: rgba(34,34,38,0.93);
     border-radius: 10px;
     border: 1.5px solid var(--border-grey);
     box-shadow: var(--shadow-light);
@@ -775,7 +781,7 @@ footer {
 .globe-section {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
-    background: var(--bg-grey);
+    background: rgba(34,34,38,0.93);
     box-shadow: var(--shadow-light);
     border-radius: 18px;
     border: 2px solid var(--border-grey);
@@ -892,7 +898,7 @@ footer {
     margin: 3.5rem auto 3.5rem auto;
     padding: 2.5rem 2.5rem 2.5rem 2.5rem;
     max-width: 1200px;
-    background: var(--bg-grey);
+    background: rgba(34,34,38,0.93);
 }
 
 @media (max-width: 900px) {
@@ -940,7 +946,7 @@ footer {
 }
 
 .clock-card {
-    background: var(--bg-grey);
+    background: rgba(34,34,38,0.93);
     border: 1.5px solid var(--border-grey);
     border-radius: 14px;
     box-shadow: var(--shadow-light);
