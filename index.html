@@ -8,37 +8,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- World Clocks Section -->
-    <section id="world-clocks" class="world-clocks" style="margin-top: 60px;">
-        <div class="clocks-container">
-            <div class="clock-card">
-                <div class="analog-clock" id="clock-ny"></div>
-                <div class="digital-clock" id="digital-ny"></div>
-                <div class="timezone-label">New York (EST)</div>
-            </div>
-            <div class="clock-card">
-                <div class="analog-clock" id="clock-london"></div>
-                <div class="digital-clock" id="digital-london"></div>
-                <div class="timezone-label">London (GMT)</div>
-            </div>
-            <div class="clock-card">
-                <div class="analog-clock" id="clock-berlin"></div>
-                <div class="digital-clock" id="digital-berlin"></div>
-                <div class="timezone-label">Berlin (CET)</div>
-            </div>
-            <div class="clock-card">
-                <div class="analog-clock" id="clock-tokyo"></div>
-                <div class="digital-clock" id="digital-tokyo"></div>
-                <div class="timezone-label">Tokyo (JST)</div>
+    <header class="rain-banner">
+        <video class="rain-video" src="rain.mp4" autoplay loop muted playsinline></video>
+        <div class="banner-overlay">
+            <div class="clocks-container">
+                <div class="clock-card">
+                    <div class="analog-clock" id="clock-ny"></div>
+                    <div class="digital-clock" id="digital-ny"></div>
+                    <div class="timezone-label">New York (EST)</div>
+                </div>
+                <div class="clock-card">
+                    <div class="analog-clock" id="clock-london"></div>
+                    <div class="digital-clock" id="digital-london"></div>
+                    <div class="timezone-label">London (GMT)</div>
+                </div>
+                <div class="clock-card">
+                    <div class="analog-clock" id="clock-berlin"></div>
+                    <div class="digital-clock" id="digital-berlin"></div>
+                    <div class="timezone-label">Berlin (CET)</div>
+                </div>
+                <div class="clock-card">
+                    <div class="analog-clock" id="clock-tokyo"></div>
+                    <div class="digital-clock" id="digital-tokyo"></div>
+                    <div class="timezone-label">Tokyo (JST)</div>
+                </div>
             </div>
         </div>
-    </section>
+        <audio id="rain-audio" src="rain.mp3" autoplay loop hidden></audio>
+    </header>
+
     <nav class="navbar">
         <div class="nav-content">
             <div class="nav-logo">
-                <img src="/project1.png" alt="Logo" style="height:40px;width:40px;border-radius:7px;box-shadow:0 2px 8px rgba(0,0,0,0.14);margin-right:10px;vertical-align:middle;">
+                <img src="coganname.png" alt="Cogan Wagner Logo Artwork" class="coganname-logo">
             </div>
-            <div class="nav-brand">Wgoc</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -51,12 +54,30 @@
 
     <section id="home" class="hero section-card">
         <div class="hero-content">
-            <h1>Wgoc</h1>
+            <img src="coganname.png" alt="Cogan Wagner Logo Artwork" class="coganname-hero-logo">
             <p>Development</p>
             <div class="social-links">
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="trailer-section">
+                <div class="trailer-title">Dayz Server Trailer</div>
+                <div class="trailer-embed-container">
+                    <iframe class="trailer-embed" src="https://www.youtube.com/embed/Qd0_oj_8sV8" title="Dayz Server Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="mod-showcase">
+                <div class="mod-gallery">
+                    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3446823299" target="_blank" class="mod-thumb-link" title="HGC Leveling System">
+                        <img src="level.jpg" alt="Leveling System Mod" class="mod-thumb">
+                        <div class="mod-caption">HGC Leveling System</div>
+                    </a>
+                    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3282237841" target="_blank" class="mod-thumb-link" title="Nom Nom Collectibles">
+                        <img src="Nomnom.jpg" alt="Nom Nom Collectibles Mod" class="mod-thumb">
+                        <div class="mod-caption">Nom Nom Collectibles<br><span class="mod-highlight">Check it out!</span></div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -82,6 +103,18 @@
                 <span class="snake-highscore">High Score: <span id="snake-highscore">0</span></span>
             </div>
         </div>
+    </section>
+
+    <section id="marvel-rivals" class="rivals-section section-card">
+      <h2>Marvel Rivals Top 500</h2>
+      <div class="rivals-img-container">
+        <a href="https://tracker.gg/marvel-rivals/leaderboards?board=rank_score&device=pc&season=5&page=1" target="_blank" rel="noopener">
+          <img src="rivals.png" alt="Marvel Rivals Leaderboard" class="rivals-img" />
+        </a>
+      </div>
+      <div class="rivals-btn-container">
+        <a href="https://tracker.gg/marvel-rivals/leaderboards?board=rank_score&device=pc&season=5&page=1" target="_blank" rel="noopener" class="rivals-btn">View Top 500 Leaderboard</a>
+      </div>
     </section>
 
     <section id="globe-section" class="globe-section section-card">
@@ -125,6 +158,12 @@
         </div>
     </section>
 
+    <div class="trailer-section">
+        <div class="trailer-title">Just for fun, here are some tropical fish.</div>
+        <div class="trailer-embed-container">
+            <iframe class="trailer-embed" src="https://www.youtube.com/embed/DHUnz4dyb54" title="Tropical Reef Camera powered by EXPLORE.org" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 Cogan Wagner. All rights reserved.</p>
     </footer>
